@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EasyChat.ListViewPage1">
+  <ListView x:Name="MyListView"
+            ItemsSource="{Binding collection}"
+            ItemTapped="Handle_ItemTapped"
+            CachingStrategy="RecycleElement">
+            
+    <!--Built in Cells-->
+		<!--<ListView.ItemTemplate BackgroundColor="#03A9F4">
+        <DataTemplate >
+            <TextCell  Text="{Binding .}" />
+        </DataTemplate>
+    </ListView.ItemTemplate>
+    
+    Custom View Cells-->
+
+		<ListView.ItemTemplate>
+			<DataTemplate>
+				<ViewCell>
+					<StackLayout>
+						<Label Text="{Binding Username}" 
+                   Style="{DynamicResource ListItemDetailTextStyle}"/>
+						<Label  Text="{Binding Text}" 
+                   Style="{DynamicResource ListItemTextStyle}" />
+			
+          </StackLayout>
+        </ViewCell>
+      </DataTemplate>
+    </ListView.ItemTemplate>
+    
+  </ListView>
+</ContentPage>

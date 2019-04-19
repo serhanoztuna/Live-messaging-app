@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title ="Giriş Yap"
+             x:Class="EasyChat.MainPage">
+
+    <StackLayout VerticalOptions="Center" 
+        HorizontalOptions="CenterAndExpand">
+        <Entry x:Name="UserName" Placeholder="Adın nedir?" WidthRequest="200"/>
+        <Button Text="Giriş Yap" Clicked="Button_OnClicked"></Button>
+    </StackLayout>
+</ContentPage>
